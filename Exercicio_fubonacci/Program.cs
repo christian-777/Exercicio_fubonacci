@@ -2,30 +2,34 @@
 {
     private static void Main(string[] args)
     {
-        //fibonacci 
+        //fibonacci 2
 
-        int n1=1, n2=0, aux, position;
+
+        int n1 = 1, n2 = 0, position;
         string t = "";
 
         Console.WriteLine("digite a posicao do fibonacci: ");
         position = int.Parse(Console.ReadLine());
 
-        
+
         if (position >= 1)
         {
             for (int i = 0; i < position; i++)
             {
-                aux = n2;
-                n2 += n1;
-                n1 = aux;
+                n2 = n1 + n2;
+               
 
-                t += n2+" ";
+                n1 = n2 - n1;
+
+                Console.WriteLine(n2);
+
             }
-            Console.WriteLine(t);
+            
         }
         else
         {
             Console.WriteLine("nao contempla");
         }
+
     }
 }
